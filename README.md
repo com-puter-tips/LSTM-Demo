@@ -1,21 +1,48 @@
 # LSTM-Demo
-A sample program to run bidirectional LSTM from Tensorflow.
 
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-- This program was tested in Python 3.9.13.
-- You can run the script `test-fhe.py` from console or IDE.
-- Install dependencies with `pip install -r requirements.txt`.
-- Sample output is availble in this repo as `out.txt` and accuracy plot as `Figure_1.png`.
-- The file used for analysis is available as `sonar.csv`.
+A sample program to run a bidirectional LSTM with TensorFlow.
 
+## Description
 
-You may optionally run the script available in this repo `auto4mat.py` to fix python syntax, coding style, modules and generate requirements.
-- You need to install following modules if not present:
+This demo trains a bidirectional LSTM on the Sonar dataset (`sonar.csv`) and reports classification accuracy. It is intended as a minimal, runnable reference for building bidirectional LSTM models with TensorFlow and Keras.
 
-`pip install pyupgrade`
+## Requirements
 
-`pip install black`
+- Python 3 (tested on Python 3.9.13)
+- Dependencies: `tensorflow`, `pandas`, `scikit-learn`, `matplotlib`
 
-`pip install isort`
+Install them with:
 
-`pip install pipreqs`
+```
+pip install -r requirements.txt
+```
+
+## Usage
+
+Run the script from a console or IDE:
+
+```
+python3 test-fhe.py
+```
+
+- The dataset used for analysis is `sonar.csv`.
+- A sample run is captured in `out.txt` and the accuracy plot in `Figure_1.png`.
+
+## Developer utility
+
+`auto4mat.py` is an optional helper that upgrades Python syntax and formats the code (using `pyupgrade`, `black`, `isort`) and regenerates `requirements.txt` (using `pipreqs`):
+
+```
+pip install pyupgrade black isort pipreqs
+python3 auto4mat.py
+```
+
+## Citation
+
+If you use this software, please cite it using the metadata in [CITATION.cff](CITATION.cff).
+
+## License
+
+Distributed under the GNU General Public License v3.0. See [LICENSE](LICENSE).
